@@ -13,7 +13,7 @@ export default function Pokecard({ id, name, type, base_experience }) {
   let imgSrc = `${POKE_API}${modifiedId}.png`;
   return (
     <div className="Pokecard">
-      <h1>{name}</h1>
+      <h2>{name}</h2>
       <img src={imgSrc} alt={name} />
       <div>Type: {type}</div>
       <div>EXP: {base_experience}</div>
