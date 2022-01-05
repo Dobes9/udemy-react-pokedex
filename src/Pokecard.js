@@ -20,7 +20,9 @@ export default function Pokecard({ id, name, type, base_experience }) {
   return (
     <div className="Pokecard" key={name}>
       <h2 className="Pokecard-title">{name}</h2>
-      <img src={imgSrc} alt={name} />
+      <div className="Pokecard-image">
+        <img src={imgSrc} alt={name} />
+      </div>
       <div className="Pokecard-data">Type: {type}</div>
       <div className="Pokecard-data">EXP: {base_experience}</div>
     </div>
