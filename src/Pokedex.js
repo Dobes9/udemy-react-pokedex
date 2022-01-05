@@ -13,11 +13,16 @@ export default function Pokedex({ pokemon, exp, isWinner }) {
   //     { id: 94, name: "Gengar", type: "poison", base_experience: 225 },
   //     { id: 133, name: "Eevee", type: "normal", base_experience: 65 },
   //   ];
+
+  let title = isWinner ? (
+    <h1 className="Pokedex-winner">Winning Hand</h1>
+  ) : (
+    <h1 className="Pokedex-loser">Losing Hand</h1>
+  );
   return (
     <div className="Pokedex">
-      <h1>Pokedex</h1>
-      <p>Total Experience: {exp}</p>
-      <p>{isWinner ? "WINNER" : "LOSER"}</p>
+      {title}
+      <h4>Total Experience: {exp}</h4>
       <div className="Pokedex-cards">
         {pokemon.map((p, i) => {
           return (
