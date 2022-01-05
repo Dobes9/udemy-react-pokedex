@@ -19,9 +19,10 @@ export default function Pokedex({ pokemon, exp, isWinner }) {
       <p>Total Experience: {exp}</p>
       <p>{isWinner ? "WINNER" : "LOSER"}</p>
       <div className="Pokedex-cards">
-        {pokemon.map((p) => {
+        {pokemon.map((p, i) => {
           return (
             <Pokecard
+              key={i}
               id={p.id}
               name={p.name}
               type={p.type}

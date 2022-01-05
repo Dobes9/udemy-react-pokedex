@@ -18,7 +18,7 @@ export default function Pokecard({ id, name, type, base_experience }) {
     number <= 999 ? `00${number}`.slice(-3) : number;
   let imgSrc = `${POKE_API}${padToThree(id)}.png`;
   return (
-    <div className="Pokecard">
+    <div className="Pokecard" key={name}>
       <h2 className="Pokecard-title">{name}</h2>
       <img src={imgSrc} alt={name} />
       <div className="Pokecard-data">Type: {type}</div>
